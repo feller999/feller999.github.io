@@ -97,6 +97,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+// TESTE — remove depois
+setTimeout(() => {
+  currentRoom = "test-room-123";
+  console.log("Fake match! Room:", currentRoom);
+}, 1000);
 
 
 

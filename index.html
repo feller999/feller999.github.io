@@ -36,7 +36,7 @@
 
   <!-- tela do usuário -->
   <div id="display-area" style="min-height:400px; border:1px solid rgb(94,94,100);">
-    <p id="placeholder-text">placeholder. make it able to store past prompts.</p>
+    <p id="placeholder-text">have fun!!</p>
   </div>
 
   <!-- tela da IA (escondida por padrão) -->
@@ -79,13 +79,10 @@
 
   </div> <!-- fecha layout-container -->
 
-<script src="/socket.io/socket.io.js"></script>
-<script>
-  const socket = io();
-  socket.on("connect", () => {
-    console.log("Connected to server:", socket.id);
-  });
-</script>
+<script src="https://seuapp.up.railway.app/socket.io/socket.io.js"></script>
+<script>const socket = io("https://seuapp.up.railway.app");</script>
+
+
 <script src="./commision.js"></script>
 
 </body>
