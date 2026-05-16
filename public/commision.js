@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const rect = canvas.getBoundingClientRect();
   canvas.width = rect.width;
   canvas.height = rect.height;
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, canvas.width, canvas.height); 
 }
 
 resizeCanvas();
