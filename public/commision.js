@@ -12,13 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
   canvas.addEventListener("mousemove", (e) => {
     if (!drawing) return;
     const rect = canvas.getBoundingClientRect();
-    ctx.lineWidth = 4;
-    ctx.lineCap = "round";
-    ctx.strokeStyle = "#000000";
-    ctx.lineTo(e.clientX - rect.left, e.clientY - rect.top);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(e.clientX - rect.left, e.clientY - rect.top);
+    const scaleX = canvas.width / rect.width;
+const scaleY = canvas.height / rect.height;
+const x = (e.clientX - rect.left) * scaleX;
+const y = (e.clientY - rect.top) * scaleY;
+ctx.lineWidth = 4;
+ctx.lineCap = "round";
+ctx.strokeStyle = "#000000";
+ctx.lineTo(x, y);
+ctx.stroke();
+ctx.beginPath();
+ctx.moveTo(x, y);
   });
 
   function clearCanvas() {
