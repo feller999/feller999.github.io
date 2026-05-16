@@ -5,12 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // canvas setup
   const canvas = document.getElementById("drawing-canvas");
   const ctx = canvas.getContext("2d");
-  function resizeCanvas() {
+ function resizeCanvas() {
   const rect = canvas.getBoundingClientRect();
   canvas.width = rect.width;
   canvas.height = rect.height;
   ctx.fillStyle = "white";
-  ctx.fillRect(0, 0, canvas.width, canvas.height); 
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
 resizeCanvas();
@@ -44,9 +44,10 @@ ctx.beginPath();
 ctx.moveTo(x, y);
   });
 
-  function clearCanvas() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-  }
+function clearCanvas() {
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
 
   // botões toggle
   const buttons = document.querySelectorAll(".toggle button");
